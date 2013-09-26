@@ -143,7 +143,7 @@ CACHES = {
    }
 }
 
-JOHNNY_MIDDLEWARE_KEY_PREFIX='jc_ncert'
+JOHNNY_MIDDLEWARE_KEY_PREFIX='jc_ison'
 
 ROOT_URLCONF = 'demo.urls'
 
