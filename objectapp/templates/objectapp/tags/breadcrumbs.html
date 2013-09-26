@@ -1,0 +1,9 @@
+{% load objectapp_tags i18n %}
+
+{% for crumb in breadcrumbs %}
+{% if not forloop.last %}
+<a href="{{ crumb.url }}" title="{{ crumb.name }}">{{ crumb.name }}</a> {{ separator }}
+{% else %}
+  {{ crumb.name }}
+{% endif %}
+{% endfor %}

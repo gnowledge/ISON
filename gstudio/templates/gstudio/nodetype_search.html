@@ -1,0 +1,118 @@
+{% extends "gstudio/nodetype_list.html" %}
+{% load i18n gstudio_tags %}
+{% load adminmedia grp_tags %}
+{% load tagging_tags %}
+
+{% block title %}{% trans "Search results for" %} {% if pattern %}'{{ pattern }}'{% endif %}{% if page_obj %}{% ifnotequal page_obj.number 1 %} | {% trans "Page" %} {{ page_obj.number }}{% endifnotequal %}{% endif %}{% endblock %}
+
+{% block meta-description %}{% trans "Search results for" %} {% if pattern %}'{{ pattern }}'{% endif %}{% if page_obj %}{% ifnotequal page_obj.number 1 %} {% trans "page" %} {{ page_obj.number }}{% endifnotequal %}{% endif %}{% endblock %}
+
+{% block link %}
+  {{ block.super }}
+  <link rel="alternate" type="application/rss+xml" title="{% trans "RSS Feed of search result of" %} '{{ pattern }}'" href="{% url gstudio_nodetype_search_feed %}?pattern={{ pattern }}" />
+{% endblock %}
+
+{% block content %}
+<script type="text/javascript" >
+$(window).load(function(){ 
+$("#content").css({"width": "600px"});
+$(".span-16").css({"width": "1000px"});
+$("#chart").hide();
+$("#graphcss").hide(); 
+});
+</script>
+<h1>{% trans "Search results  for" %} {% if pattern %}'{{ pattern }}'{% endif %}</h1>
+<div class="search">
+  <form method="get" id="main_searchform" action="{% url gstudio_nodetype_search %}">
+    <p>
+      <input type="text" value="{{ pattern }}" name="pattern" id="main_searchbox" />
+      <input type="submit" id="button" value="OK" />
+      <a title="{% trans 'You can use - to exclude words or phrases, &quot;double quotes&quot; for exact phrases and the AND/OR boolean operators combined with parenthesis for complex searchs.' %}">
+        <img src="{{ STATIC_URL }}gstudio/img/help.png" alt="?" width="14" height="14" />
+      </a>
+    </p>
+  </form>
+</div>
+{% if error %}
+<p class="error">{{ error }}</p>
+{% endif %}
+
+{% if object_dic %}
+{% for key,value in object_dic.items %}
+        {% if key == 'Image' %}
+               {% if value %}
+               <h2><b>Images</b></h2>
+		   {% for image1 in value %}
+		   <a  class="preview" title="{{image1.title}}" href="/gstudio/resources/images/show/{{image1.id}}"><img src="{% admin_media_prefix %}img/{{image1.ref.image|cut:'.jpg'|cut:'.png'|cut:'.JPG'|cut:'.JPEG'|cut:'.jpeg'|cut:'.svg'|cut:'.tif'|cut:'.gif'|cut:'.ogv'}}-thumbnail">&nbsp;&nbsp;</a>
+		  
+		 {% endfor %}
+
+	{% endif %}
+	{% endif %}       
+
+	{% if key == 'ImgCollection' %}
+               {% if value %}
+               <h2><b>Image Collections:</b></h2>
+	        {% include "gstudio/searchDetail.html" %}
+	       {% endif %}     
+	{% endif %}	
+	       
+	{% if key == 'Document' %}
+              {% if value %}
+               <h2><b>Documents:</b></h2>
+	        {% include "gstudio/searchDetail.html" %}
+	       {% endif %}     
+	{% endif %}	
+
+     {% if key == 'DocCollection' %}
+               {% if value %}
+               <h2><b>Document Collections:</b></h2>
+	        {% include "gstudio/searchDetail.html" %}
+	       {% endif %}     
+	{% endif %}	
+
+	{% if key == 'Video' %}
+               {% if value %}
+               <h2><b>Videos</b></h2>
+	       {% for video in value %}
+	       <a href="/gstudio/resources/videos/show/{{video.id}}/">
+		 <img src="http://wetube.gnowledge.org/{{video.slug}}/icon128.jpg" alt="{{ video.title }}" style="border-radius: 10px 10px 10px 10px;" title="{{ video.title }}">
+	       </a>
+	       {% endfor %}
+	       {% endif %}     
+	{% endif %}
+
+	{% if key == 'Page' %}
+               {% if value %}
+               <h2><b>Pages</b></h2>
+	        {% include "gstudio/searchDetail.html" %}
+	       {% endif %}     
+	{% endif %}	     
+
+	{% if key == 'Collection' %}
+               {% if value %}
+               <h2><b>Page Collections:</b></h2>
+	       {% include "gstudio/searchDetail.html" %}
+	       {% endif %}     
+	{% endif %}
+	     
+
+{% empty %}
+<p class="notice">{% trans "Nothing found." %}</p>
+{% endfor %}
+
+{% endif %}
+{% if commentout %}
+{% for key,value in object_dic.items %}
+	{% if key == 'Page' %}
+               {% if value %}
+               <h2><b>Pages</b></h2>
+	        {% include "gstudio/searchDetail.html" %}
+	       {% endif %}     
+	{% endif %}
+{% empty %}
+<p class="notice">{% trans "Nothing found." %}</p>
+{% endfor %}
+
+{% endif %}
+{% endblock %}

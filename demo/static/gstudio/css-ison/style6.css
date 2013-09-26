@@ -1,0 +1,86 @@
+/* @group Style6 Colors */
+
+/* Logo */
+
+#logo {background: url(/static/gstudio/images-ison/style6/logo.png) 0 0 no-repeat;}
+#logo-alt {background: url(/static/gstudio/images-ison/style6/logo-alt.png) 0 0 no-repeat;}
+
+/* Structure */
+
+a, #main-content ul li a {color: #ac3395;}
+body {background: #666;}
+#pathway {color: #ac3395;}
+#pathway a {color: #999;}
+#page-bg {background: #fff;}
+#copyright {color: #999;}
+#showcase {background: #000306 url(/static/gstudio/images-ison/style6/showcase-bg.jpg) 10% 80% repeat-x;}
+/* #showcase-bottom-bg {background: url(/static/gstudio/images-ison/style6/showcase-bottom-bg.png) 0 100% repeat-x;} */
+/*#footer-top {background: #fff url(/static/gstudio/images-ison/style6/footer-top.jpg) 50% 5px no-repeat;} */
+/* #footer-top {background: #fff url(/static/gstudio/images-ison/style6/footer-top.png) 20% 5px repeat-x;} 
+#footer-top2 {background: url(/static/gstudio/images-ison/style6/footer-top2.png) 40% 100% repeat-x;}*/
+#footer {background: url(/static/gstudio/images-ison/style6/footer-bg.png) 0 0 repeat-x;}
+#footer-bar {background: url(/static/gstudio/images-ison/style6/footer-bar.png) 50% 0 no-repeat;}
+#footer-highlight {background: url(/static/gstudio/images-ison/style1/footer-highlight.png) 50% 6px no-repeat;}
+img#rocket {background: url(/static/gstudio/images-ison/style6/relativity-computing.png) 0 0 no-repeat;}
+.xhtml-button {background: url(/static/gstudio/images-ison/style6/xhtml.png) 0 0 no-repeat;}
+.css-button {background: url(/static/gstudio/images-ison/style6/css.png) 0 0 no-repeat;}
+
+/* Artwork Themes */
+
+#showcase-layer1 {background: url(/static/gstudio/images-ison/theme6/showcase-layer1.png) 20% 40% repeat-x;}
+/* #showcase-layer2 {background: url(/static/gstudio/images-ison/theme6/showcase-layer2.png) 40% 80% repeat-x;margin: 0;padding: 0;width: 100%;} */
+#showcase-layer3 {background: url(/static/gstudio/images-ison/theme6/showcase-layer3.png) 70% 0 repeat-x;margin: 0;padding: 0;width: 100%;}
+
+.header-module {}
+
+/* Firefox2 Hack */
+#showcase-layer1 {font-family: "20% 40%";}
+#showcase-layer2 {font-family: "40% 80%";}
+#showcase-layer3 {font-family: "70% 0";}
+
+/* Horizontal Menu */
+
+#horiz-menu {background: url(/static/gstudio/images-ison/style6/horiz-menu-bg.png) 0 0 repeat-x;}
+#horiz-menu a, #horiz-menu .separator {color: #fff;}
+#horiz-menu li {background: url(/static/gstudio/images-ison/style6/horiz-r.png) 100% 4px no-repeat;}
+#horiz-menu li a, #horiz-menu li .separator {background: url(/static/gstudio/images-ison/style6/horiz-l.png) 0 4px no-repeat;}
+#horiz-menu li.active, #horiz-menu li.active:hover, #horiz-menu li.active.sfHover, #horiz-menu li:hover, #horiz-menu li.sfHover {background: url(/static/gstudio/images-ison/style6/horiz-active-r.png) 100% 4px no-repeat;}
+#horiz-menu li.active a, #horiz-menu li.active .separator, #horiz-menu li.active a:hover, #horiz-menu li.active .separator:hover, #horiz-menu li:hover a, #horiz-menu li:hover .separator, #horiz-menu li.sfHover a, #horiz-menu li.sfHover .separator {background: url(/static/gstudio/images-ison/style6/horiz-active-l.png) 0 4px no-repeat;color: #32447A}
+#horiz-menu ul ul li a:hover, #horiz-menu ul ul li .separator:hover, #horiz-menu ul ul li.parent a:hover, #horiz-menu ul ul li.parent .separator:hover, #horiz-menu ul ul li:hover, #horiz-menu ul ul li.active:hover, #horiz-menu ul ul li.sfHover, #horiz-menu ul ul li.active.sfHover {background: #113B73 url(/static/gstudio/images-ison/style6/dropdown-arrow.png) 10px 12px no-repeat;}
+#horiz-menu ul ul li a.daddy:hover, #horiz-menu ul ul li .separator.daddy:hover, #horiz-menu ul ul li.parent:hover, #horiz-menu ul ul li a.daddy.sfHover, #horiz-menu ul ul li .separator.daddy.sfHover {background: #113B73 url(/static/gstudio/images-ison/style6/dropdown-active.png) 95% 12px no-repeat;}
+#horiz-menu ul ul li, #horiz-menu ul ul li.active, #horiz-menu li.active li a:hover, #horiz-menu li.active li a.sfHover, #horiz-menu li a.separator {background: url(/static/gstudio/images-ison/style6/dropdown-arrow.png) 10px 12px no-repeat;color: #fff;}
+#horiz-menu ul ul {background: url(/static/gstudio/images-ison/style6/menu-dropdown-bg.png) 50% 100% no-repeat;}
+#horiz-menu ul ul a, #horiz-menu li:hover li a, #horiz-menu ul ul .separator, #horiz-menu li:hover li .separator, #horiz-menu li.sfHover li a, #horiz-menu li.sfHover li .separator, #horiz-menu li:hover li:hover a, #horiz-menu li:hover li:hover .separator, #horiz-menu li.sfHover li.sfHover a, #horiz-menu li.sfHover li.sfHover .separator {color: #fff;}
+
+/* Side Menus */
+
+a.mainlevel {background: url(/static/gstudio/images-ison/style6/submenu-arrow.png) 0 4px no-repeat;color: #32447A;}
+a.mainlevel:hover, ul.menu a:hover, ul.menu .separator:hover, a.sublevel:hover {color: #000;}
+ul.menu a, ul.menu .separator {background: url(/static/gstudio/images-ison/style6/submenu-arrow.png) 0 16px no-repeat;color: #32447A;}
+ul.menu ul a, ul.menu ul .separator, a.sublevel {color: #777;}
+
+/* Modules */
+
+.top-module, .header-module .moduletable h3 {color: #fff;}
+#bottommodules .module h3, #bottommodules a, #footer form label {color: #fff;}
+.header-module {color: #ccc;}
+#main-body .module h3, #main-body .moduletable h3, .contentheading, #mainmodules h3, .module-icon1 h3, .module-icon2 h3, .module-icon3 h3, .module-icon4 h3, .module-sidenav h3 {color: #32447A;}
+#mainmodules3 .module h3, #main-body .module-hilite2 h3 {background: #F1F1F1;color: #999;}
+#bottommodules {color: #bbb;}
+#main-body .module-hilite1 h3, #mainmodules3 .module-hilite1 {color: #32447A;}
+#main-body .moduletable-hilite3 h3, #main-body .module-hilite3 h3, #mainmodules3 .moduletable-hilite3 h3, #mainmodules3 .module-hilite3 h3, table.poll thead {color: #ac3395;} 
+.module h3 span, .module-hilite1 h3 span, .module-hilite2 h3 span, .module-hilite3 h3 span, .module-icon1 h3 span, .module-icon2 h3 span, .module-icon3 h3 span, .module-icon4 h3 span, .moduletable h3 span, .moduletable-hilite1 h3 span, .moduletable-hilite2 h3 span, .moduletable-hilite3 h3 span, .moduletable-icon1 h3 span, .moduletable-icon2 h3 span, .moduletable-icon3 h3 span, .moduletable-icon4 h3 span {color: #333;}
+#showcase .moduletable h3 span {color: #fff;}
+#rokslide-toolbar li:hover, #rokslide-toolbar li.current, #tabmodules .module h3 {color: #32447A;}
+
+/* Login */
+
+#footer input#mod_login_username.inputbox, #footer input#mod_login_password.inputbox, #footer input#modlgn_username.inputbox, #footer input#modlgn_passwd.inputbox {background: url(/static/gstudio/images-ison/style6/login-bg.png) 50% 50% no-repeat;color: #ac3395;}
+#footer .module input.button {background: url(/static/gstudio/images-ison/style6/login-button.png) 0 0 no-repeat;color: #ac3395;}
+input#mod_login_username.inputbox, input#mod_login_password.inputbox, input#modlgn_username.inputbox, input#modlgn_passwd.inputbox {border: 1px solid #ddd;}
+
+span.subline {color: #2a6eb2;}
+.top-module span {color: #d895d3;}
+.top-module {color: #fff;}
+
+/* @end */

@@ -1,0 +1,343 @@
+/* Edit the width and height of #logo to match your new logo image size when customizing your logos */
+
+/* This is the Main template logo */
+#logo {width: 325px;height: 72px;position: absolute;top: 20px;left: 0;}
+
+/* This alternate logo only appears when "Enable Showcase" is set to False in the template configuration */
+#logo-alt {width: 225px;height: 72px;margin-top: 0;float: left;}
+
+/* @group Core Elements */
+
+html {height: 100%;margin-bottom: 1px;}
+body {margin: 0;font-family: Arial;font-size: 80%;line-height: 135%;}
+
+/* Font family information */
+
+body#ff-vertigo, body#ff-vertigo td {font-family: "Lucida Grande",Helvetica,Verdana,sans-serif;}
+body#ff-optima, #ff-optima td {font-family: Optima, Lucida, 'MgOpen Cosmetica', 'Lucida Sans Unicode', sans-serif;}
+body#ff-geneva, #ff-geneva td {font-family: Geneva, Tahoma, "Nimbus Sans L", sans-serif;}
+body#ff-helvetica, #ff-helvetica td {font-family: Helvetica, Arial, FreeSans, sans-serif;}
+body#ff-lucida, #ff-lucida td {font-family: "Lucida Grande",Helvetica,Verdana,sans-serif;}
+body#ff-georgia, #ff-georgia td {font-family: Georgia, sans-serif;}
+body#ff-trebuchet, #ff-trebuchet td {font-family: "Trebuchet MS", sans-serif;}
+body#ff-palatino, #ff-palatino td {font-family: "Palatino Linotype", "Book Antiqua", Palatino, "Times New Roman", Times, serif;}
+body#ff-vertigo #horiz-menu, body#ff-vertigo #bottom-menu, body#ff-vertigo a.mainlevel, body#ff-vertigo a.sublevel, body#ff-vertigo #pathway {font-family: Helvetica, Arial, FreeSans, sans-serif;}
+
+/* Core Styles */
+
+form {margin: 0;padding: 0;}
+body.f-small, body#ff-optima.f-small, body#ff-georgia.f-small {font-size: 11px;}
+body, body.f-default {font-size: 12px;}
+body#ff-optima, body#ff-optima.f-default {font-size: 13px;}
+body#ff-georgia, body#ff-georgia.f-default {font-size: 13px;}
+body.f-large, body#ff-optima.f-large, body#ff-georgia.f-large {font-size: 14px;}
+p {margin-top: 10px;margin-bottom: 15px;}
+h1, h2, h3, h4, h5 {padding-bottom: 5px;margin: 25px 0 10px 0;font-weight: normal;line-height: 120%;}
+h1 {font-size: 200%;line-height: 100%;}
+h2 {font-size: 175%;line-height: 100%;}
+h3 {font-size: 150%;}
+h4 {font-size: 120%;}
+h5 {font-size: 120%;text-transform: uppercase;}
+a {text-decoration: none;}
+a:hover {text-decoration: underline;}
+.clr {clear: both;}
+#main-content ul, #mainmodules3 ul {padding-left: 15px;}
+#main-content ul li, #mainmodules3 ul li {list-style: none;padding: 0 0 5px 15px;background: url(/static/gstudio/images-ison/main-bullet.png) 0 3px no-repeat;}
+
+/* @end */
+
+/* @group Joomla Elements */
+
+.mosimage_caption {font-size: 90%;}
+.componentheading {font-size: 180%;line-height: 130%;font-weight: normal;padding: 0 0 0 5px;margin: 0 0 20px 0;}
+.contentheading {font-size: 180%;font-weight: normal;border: 0;padding: 0;line-height: 140%;}
+span.small, td.createdate, td.modifydate {font-size: 90%;}
+table.blog td.createdate {padding-bottom: 5px;}
+table.blog td.modifydate {padding-top: 10px;}
+td.buttonheading, .contentpaneopen td.buttonheading {padding: 0 1px;border: 0;}
+td.column_separator {padding-left: 15px;}
+td.componentheading {padding-bottom: 15px;}
+.sectiontableheader {font-weight: bold;padding: 4px;line-height: 25px;background: url(/static/gstudio/images-ison/submenu-active-bg.png) 0 100% repeat-x;}
+.sectiontablefooter {background: url(/static/gstudio/images-ison/submenu-active-bg.png) 0 100% repeat-x;padding-bottom: 8px;}
+tr.sectiontableentry1 td, tr.sectiontableentry2 td, td.sectiontableentry1, td.sectiontableentry2 {text-align: left;padding: 2px 0 0px 5px;border-bottom: 1px solid #e7e7e7;}
+tr.sectiontableentry2 td, td.sectiontableentry2 {height: 30px;}
+tr.sectiontableentry1 td, td.sectiontableentry1 {height: 30px;}
+.contentpane, .contentpaneopen {width: 100%;}
+table.poll {line-height: 135%;}
+table.poll td.sectiontableentry1, table.poll td.sectiontableentry2 {padding: 5px 0 5px 8px;vertical-align: middle;}
+table.poll thead {font-size: 110%;}
+table.pollstableborder {padding-bottom: 10px;}
+
+/* @end */
+
+/* @group Structure */
+
+.header-alt {margin-top: 20px;padding-bottom: 15px;}
+#main-body {position: relative;}
+#maincol {float: left;}
+#leftcol {float: left;}
+#leftcol .padding {padding: 0 15px 0 0;}
+#rightcol .padding {padding: 0 0 0 15px;}
+#rightcol {float: left;}
+#maincol .padding {padding: 0 15px 15px 15px;}
+
+#showcase {position: relative;}
+#showcase .wrapper {position: relative;}
+#showcase-height {height: auto;}
+#showcase-height.alt {height: 190px;}
+#showcase-bottom {z-index: 1;position: relative;}
+#showcase-bottom-bg {position: relative;z-index: 1;}
+#tools-block {height: 40px;position: relative;z-index: 3;}
+#footer-top, #footer-top2 {height: 100px;}
+#footer-bar {height: 50px;margin-bottom: 15px;}
+#footer-highlight {padding-top: 10px;}
+#horiz-menu-shadow {background: url(/static/gstudio/images-ison/horiz-menu-shadow.png) 50% 0 no-repeat;}
+#main-body-top {background: url(/static/gstudio/images-ison/mainbody-top.png) 50% 0 no-repeat;height: 40px;}
+#main-body-bottom {background: url(/static/gstudio/images-ison/mainbody-bottom.png) 50% 100% no-repeat;height: 40px;}
+
+.logo-module {width: 400px;float: left;overflow: hidden;padding: 15px 0;}
+.toolsblock-right {width: 310px;height: 35px;float: right;}
+.toolsblock-left {width: 65%;height: 35px;float: left;}
+
+#main-body {border-top: 0;margin-bottom: 4px;}
+#inset-block-right {float: right;}
+#inset-block-right .right-padding {padding-left: 20px;}
+#inset-block-left {float: left;}
+#inset-block-left .left-padding {padding-right: 20px;}
+
+#searchmod {height: 29px;padding: 0;float: left;text-align: right;overflow: hidden;}
+#searchmod .moduletable {padding: 0;}
+#searchmod .search {width: 249px;height: 29px;border: 0;padding: 0;float: left;background: url(/static/gstudio/images-ison/search-bg.png) 0 0 no-repeat;}
+#searchmod .inputbox {background: none;border: 0;float: left;width: 85%;padding: 4px 0 4px 6px;color: #666;font-size: 110%;}
+
+img#rocket {width: 165px;height: 22px;float: left;margin-right: 20px;}
+#copyright {float: left;height: 22px;line-height: 22px;}
+.copyright-block {padding: 13px 0 12px 12px;overflow: hidden;width: 80%;float: left;}
+.validation-block {padding: 15px 12px 8px 0;overflow: hidden;}
+.xhtml-button {width: 83px;height: 18px;float: right;}
+.css-button {width: 68px;height: 18px;float: right;margin-left: 5px;}
+
+table.mainbody, table.blog {width: 100%;border: 0;padding: 0;}
+.spacer .block {float: left;}
+.spacer.w99 .block {width: 99.8%;}
+.spacer.w49 .block {width: 49.8%;}
+.spacer.w33 .block {width: 33.2%;}
+.spacer.w24 .block {width: 24.8%;}
+
+/* @end */
+
+/* @group Modules */
+
+/* Module Margins and Paddings */
+
+.module, .module-hilite1, .module-hilite2, .module-hilite3, .module-icon1, .module-icon2, .module-icon3 , .module-icon4, .moduletable, .moduletable-hilite1, .moduletable-hilite2, .moduletable-hilite3, .moduletable-icon1, .moduletable-icon2, .moduletable-icon3, .moduletable-icon4, .module-sidenav {margin-bottom: 25px;}
+.module h3, .moduletable h3, .module-hilite1 h3, .module-hilite2 h3, .module-hilite3 h3, .module-icon1 h3, .module-icon2 h3, .module-icon3 h3, .module-icon4 h3, .moduletable-hilite1 h3, .moduletable-hilite2 h3, .moduletable-hilite3 h3, .moduletable-icon1 h3, .moduletable-icon2 h3, .moduletable-icon3 h3, .moduletable-icon4 h3 {margin-top: 0;}
+#mainmodules .module h3, #mainmodules2 .module h3, #mainmodules3 .module h3, .module-sidenav h3 {margin-top: 0;}
+#mainmodules .module, .module-hilite1, .module-hilite2, .module-hilite3, .module-icon1, .module-icon2, .module-icon3, .module-icon4, #mainmodules2 .module, #mainmodules3 .module, #bottommodules .module {padding: 10px 18px 0 18px;}
+#mainmodules3 {padding-top: 15px;}
+#mainmodules3 .module h3, #main-body .module-hilite2 h3 {padding: 3px 8px;margin-bottom: 18px;}
+#bottommodules {margin-bottom: 35px;}
+.header-module .padding {padding: 125px 30px 50px 30px;}
+.header-module .moduletable h3 {margin-top: 0;}
+.top-module .moduletable {padding: 0;margin: 0;}
+.module-icon1, .module-icon2, .module-icon3, .module-icon4, .moduletable-icon1, .moduletable-icon2, .moduletable-icon3, .moduletable-icon4 {padding-left: 72px;}
+#leftcol .module div div div div, #rightcol .module div div div div, .module-sidenav div div div div {background: none;padding: 0;margin: 0;}
+#leftcol .module h3, #rightcol .module h3 {margin-top: 0;}
+#leftcol .module-hilite1, #leftcol .module-hilite2, #leftcol .module-hilite3, #rightcol .module-hilite1, #rightcol .module-hilite2, #rightcol .module-hilite3 {padding: 0 5px;}
+.moduletable-flush, .logo-module .moduletable {margin: 0;padding: 0;}
+#inset-block-left .moduletable, #inset-block-right .moduletable {padding: 0 0 20px 0;}
+.moduletable_menu {padding: 10px 5px 5px 5px;margin-top: -1px;}
+.moduletable_text {padding: 15px;margin-bottom: 10px;}
+.moduletable_text h3 {margin-top: 0;}
+.header-alt .moduletable {margin-bottom: 0;}
+.debug-mod {padding: 15px;}
+
+/* Module Structure */
+
+.logo-module .moduletable h3 {display: none;}
+.banner-mod {float: right;}
+#leftcol .module, #rightcol .module, .module-sidenav, .slider1 {background: url(/static/gstudio/images-ison/module-br.png) 100% 100% no-repeat;padding: 0;}
+#leftcol .module div, #rightcol .module div, .module-sidenav div, .slider2 {background: url(/static/gstudio/images-ison/module-bl.png) 0 100% no-repeat;}
+#leftcol .module div div, #rightcol .module div div, .module-sidenav div div, .slider3 {background: url(/static/gstudio/images-ison/module-tr.png) 100% 0 no-repeat;}
+#leftcol .module div div div, #rightcol .module div div div, .module-sidenav div div div {background: url(/static/gstudio/images-ison/module-tl.png) 0 0 no-repeat;padding: 15px;}
+.slider4 {background: url(/static/gstudio/images-ison/module-tl.png) 0 0 no-repeat;}
+.mainmod-top {height: 15px;background: url(/static/gstudio/images-ison/mainmod-tm.png) 0 0 repeat-x;}
+.mainmod-top .topleft {background: url(/static/gstudio/images-ison/mainmod-tl.png) 0 0 no-repeat;height: 15px;}
+.mainmod-top .topright {background: url(/static/gstudio/images-ison/mainmod-tr.png) 100% 0 no-repeat;height: 15px;}
+.mainmod-surround {background: #F7F7F7;border-left: 1px solid #EAEAEA;border-right: 1px solid #EAEAEA;}
+.mainmod-bottom {height: 15px;background: url(/static/gstudio/images-ison/mainmod-bm.png) 0 100% repeat-x;margin-bottom: 20px;}
+.mainmod-bottom .bottomleft {background: url(/static/gstudio/images-ison/mainmod-bl.png) 0 100% no-repeat;height: 15px;}
+.mainmod-bottom .bottomright {background: url(/static/gstudio/images-ison/mainmod-br.png) 100% 100% no-repeat;height: 15px;}
+#mainmodules, #mainmodules2, #mainmodules3, #mainmodules4, #bottommodules, #extendedmodules, .showcase-module, .showcase-module2 {overflow: hidden;}
+.module-icon1, .moduletable-icon1 {background: url(/static/gstudio/images-ison/icon1.png) 15px 12px no-repeat;}
+.module-icon2, .moduletable-icon2 {background: url(/static/gstudio/images-ison/icon2.png) 15px 12px no-repeat;}
+.module-icon3, .moduletable-icon3 {background: url(/static/gstudio/images-ison/icon3.png) 18px 12px no-repeat;}
+.module-icon4, .moduletable-icon4 {background: url(/static/gstudio/images-ison/icon4.png) 15px 12px no-repeat;}
+.top-module {width: 500px;float: left;margin-top: 125px;font-size: 140%;line-height: 130%;overflow: hidden;padding-bottom: 55px;}
+.top-module span {font-size: 120%;}
+.header-module {width: 406px;height: 375px;float: right;position: relative;z-index: 2;font-size: 130%;line-height: 140%;overflow: hidden;}
+
+/* Module Header Font Sizes */
+
+.module h3, .module-hilite1 h3, .module-hilite3 h3, .module-icon1 h3, .module-icon2 h3, .module-icon3 h3, .module-icon4 h3, .moduletable h3, .moduletable-hilite1 h3, .moduletable-hilite3 h3, .moduletable-icon1 h3, .moduletable-icon2 h3, .moduletable-icon3 h3, .moduletable-icon4 h3, .module-sidenav h3 {font-size: 170%;}
+#mainmodules3 .module h3, module-hilite2, .moduletable-hilite2 {font-size: 150%;}
+#footer .module h3 {font-size: 130%;}
+
+/* @end */
+
+/* Horizontal Menus */
+
+#horiz-menu {display: block;height: 37px;line-height: 37px;}
+ul#horiznav.menutop, #horiz-menu ul.menutop {padding: 0;margin: 0;position: relative;z-index:120;float: right;}
+#horiz-menu li, #horiz-menu li a, #horiz-menu li .separator {z-index:200;position:relative;}
+#horiz-menu span {height: 37px;}
+#horiz-menu a, #horiz-menu .separator {white-space: nowrap;display: block;float: left;height: 37px;line-height: 35px;font-weight: normal;font-size: 125%;overflow: hidden;text-decoration: none;z-index: 100;cursor: pointer;padding: 0 15px 0 12px;}
+#horiz-menu li.active a, #horiz-menu li.active .separator {z-index: 100;cursor: pointer;height: 37px;}
+
+#sub-menu a:hover, #sub-menu ul.menusub li.active a {font-weight: normal;}
+#horiz-menu ul {list-style: none;padding: 0;margin: 0;}
+#horiz-menu li {display: block;float: left;margin: 0 4px 0 0;padding: 0;font-weight: bold;}
+#horiz-menu li a span, #horiz-menu li .separator span {display: block;padding: 0;}
+#sub-menu li {display: block;float: left;margin: 0;padding: 0;border: 0;}
+
+/* Menu Dropdowns */
+
+#horiz-menu li li.active, #horiz-menu li.active li a, #horiz-menu li.active li a:hover, #horiz-menu li li a:hover, #horiz-menu ul li.active.parent ul a, #horiz-menu li.active li .separator, #horiz-menu li.active li .separator:hover, #horiz-menu li li .separator:hover, #horiz-menu ul li.active.parent ul .separator {border: 0;padding: 0;margin: 0;}
+#horiz-menu li li {width: 178px;}
+#horiz-menu li li a, #horiz-menu li li .separator {font-size: 100%;font-weight: normal;background: none;padding: 0;margin: 0;}
+#horiz-menu li li, #horiz-menu li li a span, #horiz-menu li li .separator span {background: none;padding: 0;margin: 0;}
+#horiz-menu li li a span, #horiz-menu li li .separator span {padding: 0;}
+#horiz-menu li.sfHover li a, #horiz-menu li:hover li a, #horiz-menu ul li.active ul li.active li a, #horiz-menu ul li.active.parent ul li a, #horiz-menu li.sfHover li .separator, #horiz-menu li:hover li .separator, #horiz-menu ul li.active.parent ul li .separator, #horiz-menu ul li.active.parent ul li .seperator {text-indent: 20px;background: none;}
+#horiz-menu li.active li a, #horiz-menu li.active.parent li a, #horiz-menu li.active li .separator, #horiz-menu li.active.parent li .separator {font-weight: normal;font-size: 100%;background: none;}
+#horiz-menu ul ul {margin: 0;padding: 10px 0 12px 0;border: 0;}
+#horiz-menu ul ul li:hover, #horiz-menu ul ul li.sfHover {background-image: none;}
+#horiz-menu ul ul li a, #horiz-menu ul li.active.parent ul a, #horiz-menu ul li.active.parent ul a span, #horiz-menu ul ul li .separator, #horiz-menu ul li.active.parent ul .separator, #horiz-menu ul li.active.parent ul .separator span {text-transform: none;background: none;}
+#horiz-menu ul ul li.active {background: none;}
+
+/* Side Menus */
+
+a.mainlevel:hover, a.sublevel:hover {text-decoration: none;}
+a.mainlevel {line-height: 45px;height: 45px;font-size: 130%;padding: 0 0 0 12px;text-transform: lowercase;}
+a.sublevel {height: 32px;line-height: 32px;margin: 0;padding: 0 0 0 16px;font-size: 110%;background: url(/static/gstudio/images-ison/main-bullet.png) 0 2px no-repeat;}
+ul.menu {margin:0;padding: 0 0 35px 0;text-transform: lowercase;}
+ul.menu li {list-style: none;margin: 0 -15px;padding: 0 15px;float: none;border-bottom: 1px solid #e6e6e6}
+ul.menu span {display: block; height: 40px;line-height: 40px;}
+ul.menu li a, ul.menu li .separator {text-indent: 12px;}
+ul.menu ul li a, ul.menu ul li .separator {text-indent: 25px;background: url(/static/gstudio/images-ison/main-bullet.png) 8px 12px no-repeat;}
+ul.menu ul li ul li a, ul.menu ul li ul li .separator {text-indent: 45px;background-position: 28px 12px;}
+ul.menu ul li ul li ul li a, ul.menu ul li ul li ul li .separator {text-indent: 65px;background-position: 48px 12px;}
+ul.menu li.active {background: url(/static/gstudio/images-ison/submenu-active-bg.png) 0 100% repeat-x;}
+ul.menu li.parent ul li span {background: none;}
+ul.menu li.active.parent li span {background: none;}
+ul.menu li.active.parent ul li, ul.menu li.active.parent ul li.parent ul {background: none;}
+ul.menu li.active.parent ul {padding: 6px 0;margin: 0;}
+ul.menu ul span {height: 32px;line-height: 32px;}
+.moduletable-sidemenu a.mainlevel {margin: 0 0 1px 0;}
+ul.menu a, ul.menu .separator {display: block;line-height: 45px;text-indent: 0;height: 45px;overflow: hidden;font-size: 140%;float: none;}
+ul.menu li.active a, ul.menu li.active li.active a, a#active_menu.mainlevel, a#active_menu.sublevel, ul.menu li.active .separator, ul.menu li.active li.active .separator {font-weight: bold;}
+ul.menu li.active li a, ul.menu li.active li.active li a, ul.menu li.active li .separator, ul.menu li.active li.active li .separator {font-weight: normal;}
+ul.menu ul ul {padding: 0; margin: 0;background: none;}
+ul.menu li li {padding: 0;margin: 0;border-bottom: 0;}
+ul.menu ul a, ul.menu ul .separator {text-indent: 0;}
+ul.menu li.active a, ul.menu li.active a:hover, ul.menu li.active .separator, ul.menu li.active .separator:hover {text-decoration: none; line-height: 26px;}
+ul.menu li a:hover, ul.menu li .separator:hover {text-decoration: none;}
+ul.menu li.active.parent ul {margin-top: 0;margin-bottom: 0;padding-top: 0;padding-bottom: 10px;}
+ul.menu li.active.parent ul li.active.parent ul {padding: 5px 0;}
+ul.menu ul {padding: 0;margin: 0;}
+ul.menu ul a, ul.menu ul .separator {font-size: 120%;height: 32px;line-height: 32px;padding: 0;margin: 0;}
+
+/* Extra Content Styles */
+
+a.readon {margin-top: 16px;padding: 0;display: block;font-size: 120%;}
+#pathway {width: 100%;display: block;}
+span.pathway {display: block;font-weight: bold;font-size: 120%;overflow: hidden;line-height: 130%;padding-top: 8px;}
+span.pathway img {width: 6px;height: 11px;background: url(/static/gstudio/images-ison/pathway-div.png) 0 50% no-repeat;}
+span.pathway a {float: none;padding: 0 2px 0 0;font-weight: normal;}
+#accessibility {width: 50px;height: 14px;float: right;z-index: 5000;padding-top: 4px;}
+#accessibility span {background-repeat: no-repeat;}
+#accessibility a {text-decoration: none; cursor: pointer;}
+#accessibility #buttons {float: right;}
+#accessibility .button {display: block;float: right;width: 19px;height: 12px;}
+a.large .button {background: url(/static/gstudio/images-ison/font-lg.png) 0 0 no-repeat;}
+a.small .button {background: url(/static/gstudio/images-ison/font-sm.png) 0 0 no-repeat;}
+#accessibility a.small .button {margin-right: 5px;}
+a.nounder {text-decoration: none;border: 0;cursor: pointer;}
+a.nounder:hover {text-decoration: none;}
+.clr {clear:both;}
+fieldset {border-left: 0;border-right: 0;border-top: 0;}
+fieldset.input, a img, body .pollstableborder {border: 0;}
+img.content-left {float: left;margin-right: 10px;padding: 5px;}
+img.content-right {float: right;margin-left: 10px;padding: 5px;}
+.back_button {margin-top: 20px;margin-bottom: 10px;}
+.tool-tip {padding: 4px;}
+.bannergroup .clr {clear: none !important;}
+
+/* Main Body Login */
+
+form#form-login ul {padding-left: 18px;}
+form#form-login fieldset.input {padding: 0;}
+p#form-login-remember {margin-bottom: 5px;}
+input#mod_login_username.inputbox, input#mod_login_password.inputbox, input#modlgn_username.inputbox, input#modlgn_passwd.inputbox {height: 20px;display: block;width: 98%;margin-top: 3px;}
+
+/* Footer Login */
+
+#footer input#mod_login_username.inputbox, #footer input#mod_login_password.inputbox, #footer input#modlgn_username.inputbox, #footer input#modlgn_passwd.inputbox {padding: 12px 0 0 0;height:29px;display: block;width: 220px;border: 0;text-indent: 10px;margin-top: 0;}
+#footer .module input.button {border: 0;width: 57px;height: 29px;cursor: pointer;text-align: center;text-transform: uppercase;margin-top: 10px;margin-bottom: 10px;line-height: 18px;padding: 0 2px 2px 0;font-size: 10px;}
+#footer form label {color: #fff;}
+
+/* Tabbed Modules */
+
+#moduleslider-size {overflow: hidden;padding: 0;margin-bottom: 15px;}
+#leftcol #moduleslider-size, #rightcol #moduleslider-size {margin-bottom: 25px;}
+#moduleslider-size.bottom {margin-bottom: 15px;margin-top: 15px;}
+#tabmodules .padding {padding: 0;}
+#tabmodules div.module, #tabmodules div.module-hilite1, #tabmodules div.module-hilite2, #tabmodules div.module-hilite3, #tabmodules div.module-icon1, #tabmodules div.module-icon2, #tabmodules div.module-icon3, #tabmodules div.module-icon4 {padding: 0;}
+#tabmodules div.module div div div, #tabmodules div.module-hilite1 div div div, #tabmodules div.module-hilite2 div div div, #tabmodules div.module-hilite3 div div div, #tabmodules div.module-icon1 div div div, #tabmodules div.module-icon2 div div div, #tabmodules div.module-icon3 div div div, #tabmodules div.module-icon4 div div div {background: none;padding: 15px;}
+#tabmodules div.module-icon1 div div div, #tabmodules div.module-icon2 div div div, #tabmodules div.module-icon3 div div div, #tabmodules div.module-icon4 div div div {background: none;padding: 15px 15px 15px 75px;}
+#tabmodules .module-hilite1 h3, #tabmodules .module-hilite2 h3, #tabmodules .module-hilite3 h3, #tabmodules .module-hilite4 h3, #tabmodules .module-hilite5 h3, #tabmodules .module-hilite6 h3 {margin-top: 0;}
+#tabmodules .module h3, #tabmodules .module-hilite1 h3, #tabmodules .module-hilite3 h3, #tabmodules .module-icon1 h3, #tabmodules .module-icon2 h3, #tabmodules .module-icon3 h3, #tabmodules .module-icon4 h3 {background: none;margin: 0;padding: 0 0 20px 0;text-align: left;}
+#tabmodules {overflow: hidden;}
+#tabmodules div {padding: 0;margin: 0;}
+#tabmodules li span {line-height: 40px;padding: 0}
+#rokslide-toolbar span {white-space: nowrap;}
+#rokslide-toolbar {margin: 0;height: 40px;padding: 1px 1px 0 1px;color: #777;border-bottom: 1px solid #e7e7e7;}
+#rokslide-toolbar li {height: 40px;font-size: 130%;margin: 0;padding: 0 12px;border-left: 1px solid #fff;border-right: 1px solid #fff;}
+#rokslide-toolbar li.current {height: 40px;background: url(/static/gstudio/images-ison/submenu-active-bg.png) 0 100% repeat-x;border-right: 1px solid #e7e7e7;border-left: 1px solid #e7e7e7;}
+#rokslide-toolbar li.first {border-left: 0;}
+#rokslide-toolbar li.first.current{border-right: 1px solid #e7e7e7;border-left: 0;}
+#frame {text-align: left;padding: 0 5px;}
+#frame .module, #frame .module-hilite1, #frame .module-hilite2, #frame .module-hilite3, #frame .module-icon1, #frame .module-icon2, #frame .module-icon3, #frame .module-icon4 {float: left;padding: 10px;}
+#frame .mmpr-1 .module, #frame .mmpr-1 .module-hilite1, #frame .mmpr-1 .module-hilite2, #frame .mmpr-1 .module-hilite3, #frame .mmpr-1 .module-icon1, #frame .mmpr-1 .module-icon2, #frame .mmpr-1 .module-icon2, #frame .mmpr-1 .module-icon3, #frame .mmpr-1 .module-icon4 {width: auto;}
+#frame .mmpr-2 .module, #frame .mmpr-2 .module-hilite1, #frame .mmpr-2 .module-hilite2, #frame .mmpr-2 .module-hilite3, #frame .mmpr-2 .module-icon1, #frame .mmpr-2 .module-icon2, #frame .mmpr-2 .module-icon2, #frame .mmpr-2 .module-icon3, #frame .mmpr-2 .module-icon4 {width: 49.9%;}
+#frame .mmpr-3 .module, #frame .mmpr-3 .module-hilite1, #frame .mmpr-3 .module-hilite2, #frame .mmpr-3 .module-hilite3, #frame .mmpr-3 .module-icon1, #frame .mmpr-3 .module-icon2, #frame .mmpr-3 .module-icon2, #frame .mmpr-3 .module-icon3, #frame .mmpr-3 .module-icon4 {width: 33.3%;}
+#frame .mmpr-4 .module, #frame .mmpr-4 .module-hilite1, #frame .mmpr-4 .module-hilite2, #frame .mmpr-4 .module-hilite3, #frame .mmpr-4 .module-icon1, #frame .mmpr-4 .module-icon2, #frame .mmpr-4 .module-icon2, #frame .mmpr-4 .module-icon3, #frame .mmpr-4 .module-icon4 {width: 24.9%;}
+#frame .mmpr-5 .module, #frame .mmpr-5 .module-hilite1, #frame .mmpr-5 .module-hilite2, #frame .mmpr-5 .module-hilite3, #frame .mmpr-5 .module-icon1, #frame .mmpr-5 .module-icon2, #frame .mmpr-5 .module-icon2, #frame .mmpr-5 .module-icon3, #frame .mmpr-5 .module-icon4 {width: 19.9%;}
+#leftcol #frame div div, #rightcol #frame div div {width: auto;}
+#rightcol #rokslide-toolbar li, #leftcol #rokslide-toolbar li {font-size: 110%;padding: 0 8px;}
+#leftcol #tabmodules .module, #rightcol #tabmodules .module {background: none;}
+#leftcol #tabmodules .module div, #rightcol #tabmodules .module div {background: none;}
+#leftcol #tabmodules .module div div, #rightcol #tabmodules .module div div {background: none;}
+#leftcol #tabmodules .module div div div, #rightcol #tabmodules .module div div div {background: none;}
+
+/* @group Demo Content */
+
+/* Custom Modules Tutorial */
+.rokmod-demo-block .parameters div {border-right:1px dotted #666;padding-right:12px;}
+.rokmod-demo-block .options div {border-right:1px dotted #666; padding-right: 12px;}
+.rokmod-demo-block .demo div {border-right:1px dotted #666;padding-right: 12px;}
+.rokmod-demo-block .parameters, .rokmod-demo-block .options, .rokmod-demo-block .demo, .rokmod-demo-block .description {float:left;margin-right:12px;}
+.rokmod-demo-block .parameters span, .rokmod-demo-block .options span, .rokmod-demo-block .demo span, .rokmod-demo-block .description span {display:block;font-size:11px;line-height:22px;}
+.rokmod-demo-block .demo-span1 {font-weight: bold;}
+
+img#variation_preview {border: 4px solid #4F4141;width: 322px !important;}
+.variation-chooser {position:relative;margin-top: 5px;height: 25px;line-height: 25px;}
+.variation-chooser .controls {height: 25px;}
+.variation-chooser .control-prev, .variation-chooser .control-next{cursor:pointer;height:16px;margin-right:3px;width:16px;float: left;margin-top:1px;}
+.variation-chooser .control-prev{background-position:0 0;margin-right: 0.5em;}
+.variation-chooser .control-prev:hover {background-position: 0 -16px;}
+.variation-chooser .control-next{background-position:0 -32px;margin-left: 0.5em;}
+.variation-chooser .control-next:hover {background-position: 0 -48px;}
+.variation-chooser .controls{position:absolute;left:5px;}
+.variation-chooser input.button:hover {color: #333 !important;}
+
+/* @end */

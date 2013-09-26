@@ -1,0 +1,283 @@
+{% load gstudio_tags %}
+<script type="text/javascript" charset="ISO-8859-6">
+var availableobjs=[];
+var keyrt;
+var keyot;
+var dict_rt={}
+var dict_ot={}
+var availablerts=[]
+var op=""
+function reopt(keyrt){
+   if($("input:radio[name=rln_opt]").is(':checked')) {
+    op = $("input:radio[name=rln_opt]:checked").val();
+    if(op=="other_rlns")
+    {
+      if (typeof keyrt != 'undefined')
+      {
+       surl='/gstudio/templatetags/getsrc_addreln/'
+       var dic={};
+       var availableobjs=[]
+        $.ajax({
+       url: surl,
+       data: {'reltype':keyrt,'otherrelns':1},
+    //   dataType: "json",
+       success: function(result){
+           	
+          /* $.each(data.items,function(index){
+                availableobjs[i]=data(index); 
+               i=i+1; 
+               });*/
+
+            var i = 0;
+            Json= JSON.parse(result)
+            for(var each in Json){
+              availableobjs[i]=each
+              i = i + 1}
+            dict_ot=Json;
+             sets(availableobjs);
+       }
+
+       });    
+}
+}
+else
+{
+getobjects(keyrt)
+}
+}
+}
+
+
+
+function sets(availableobjs){
+$("#res_object").autocomplete({
+            source: availableobjs});
+
+}
+$.extend(dict_rt,{% get_available_rts %});
+i=0
+for (var key in dict_rt)
+{
+availablerts[i]=key
+i=i+1
+}
+function getobjects(keyrt)
+{
+surl='/gstudio/templatetags/getsrc_addreln/'
+var dic={};
+if (typeof keyrt != 'undefined')
+{
+
+$.ajax({
+       url: surl,
+       data: {'reltype':keyrt,'otherrelns':0},
+    //   dataType: "json",
+       success: function(result){
+           	
+          /* $.each(data.items,function(index){
+                availableobjs[i]=data(index); 
+               i=i+1; 
+               });*/
+
+            var i = 0;
+            Json= JSON.parse(result)
+            for(var each in Json){
+
+              availableobjs[i]=each
+              i = i + 1}
+
+            dict_ot=Json;
+             sets(availableobjs);
+       }
+
+       }); }   
+}
+$(document).ready(function(){
+
+        $("#res_relation").autocomplete({
+            source: availablerts,
+            select: function(event, ui) {
+                    keyrt=dict_rt[ui.item.value]
+                    reopt(keyrt);
+                   
+         }
+        });
+        $("#res_object").autocomplete({
+            source: availableobjs,
+            select: function(event, ui) {
+                    keyot=dict_ot[ui.item.value]
+                  
+                    
+                    
+                   
+                    
+         }
+        });
+$("#addreln").click(function(){
+reopt();
+var ajurl ="/gstudio/resources/addreln/thread/"+{{meetingob.id}}
+var res_reln = keyrt
+
+var res_obj= keyot
+
+if (res_reln == "" || res_obj == "" )
+{  alert("Please select relation and right object");
+}
+else
+{
+$.ajax({
+       url: ajurl,
+       data: {relnobj:res_reln,obobject:res_obj},
+       beforeSend: function() {
+              $("#ajax_load_image").show();
+              $("#content").css({"opacity":"0.1",})
+                              },
+       success: function(data){	
+                $('#res_relation').val("");
+                $('#res_object').val("");
+                alert("Successfully created a relation");
+	        $('#relndiv').html(data);
+		$("#chart").text("");
+		fgraph();
+                               },
+        complete: function(){
+                $("#ajax_load_image").hide();
+		$("#content").css({"opacity":"",})
+		
+			   }
+});
+}
+});
+});
+
+//(document).ready() ends here
+
+function target_popup(form) {
+    window.open('', 'formpopup', 'left=360,width=500,height=300,resizeable,scro\
+llbars');
+    form.target = 'formpopup';
+
+
+           }
+
+function relationfunction(id){
+
+r = confirm("Please confirm delete ")
+if (r==true)
+  {
+	var relation_id = "";
+	relation_id = id;
+	var ajurl ="/gstudio/resources/addreln/deleteRelation/"+{{meetingob.id}}
+	$.ajax({
+       		url: ajurl,
+	       data: {relation_ajax_id:relation_id},
+	       beforeSend: function() {
+                              $("#ajax_load_image").show();
+                            
+			      $("#content").css({"opacity":"0.1",})
+	   
+                              },
+	       success: function(data){	
+	       		     $('#relndiv').html(data);
+			     $("#chart").text("");
+			     fgraph();
+			     },
+	       complete: function(){
+                             $("#ajax_load_image").hide();
+			     $("#content").css({"opacity":"",})
+			     },
+   		});
+                             
+       			      
+  }
+else
+  {
+  
+  }
+
+
+
+}
+</script>
+<div id="relndiv">
+<br/>
+<b>Existing Relations for this page: </b>
+
+        {% if not meetingob.get_relations_for_view.items %}
+            No relations
+        {% endif %}
+
+        {% for key,value in meetingob.get_relations_for_view.items %}
+        {{key}} -
+        {% for rel in value %}
+   
+  
+           <b><a href="{{rel.url}}">{{rel.title}}</a></b>
+
+{% if user.is_authenticated %}
+           <a class="deleterelation" value="{{rel.id}}" id = "{{rel.id}}" title="delete {{rel.title}}" onclick='relationfunction("{{rel.id}}");' > <img src="/static/gstudio/js/orgitdown/orgitdown/sets/org/images/close.jpeg" width = 8px; style="vertical-align: super;"/></a>
+{% endif %}
+
+
+	{% if not forloop.last %},{% endif %}
+
+        {% endfor %}
+	   ;
+
+        {% endfor %}
+
+</div>
+{% if user.is_authenticated %}
+
+<form method="post" action=""> {% csrf_token %}
+
+<p>
+          <input type = "radio"
+                 name = "rln_opt"
+                 class = "rlnt"
+                 id="r_res"
+                 value = "resource"
+                 checked = "checked" />
+          Add a Resource (Image, Video or Document)<br/>
+          
+          <input type = "radio"
+                 name = "rln_opt"
+                 class ="rlnt"
+                 id="r_oth"
+                 value = "other_rlns" />
+         Add Other Relations<br/>
+</p>       
+
+
+<p>Select/Add a Relationtype: <nbsp></p>
+<input value="" name="textreln" id="res_relation">
+<!--
+<a href="/admin/gstudio/relationtype/add" class="add-another" id="add_id_{{ field }}" onclick="return showAddAnotherPopup(this);">
+-->
+<a href="/gstudio/resources/addreln/form/{{meetingob.id}}" class="add-another" id="addrel" onclick="target_popup(this)">
+<img width="10" height="10" alt="Add Another" src="/static/gstudio/img/icon_addlink.gif">
+</a>
+Select an object: <nbsp>
+<input value="" name="textobj" id="res_object">
+<input type="button" id="addreln" name="" value="Add Relation">
+</form>
+{% endif %}
+<script type="text/javascript">
+function refreshdiv()
+{
+ajurl="/gstudio/resources/addreln/refreshrts/"
+$.ajax({
+       url: ajurl,
+       success: function(data){
+          $.each(data, function(index) {
+availablerts=data[index]
+   $("#res_relation").autocomplete({
+            source: availablerts
+        });
+
+})
+}
+})
+
+}
+</script>
