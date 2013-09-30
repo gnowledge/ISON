@@ -41,7 +41,10 @@ $(".savesubsec1").hide();
 
   });
 </script>
-     
+    {% with page_ob.html_content|safe as page_ob_content %}
+   <font size="3"> 
+                {{page_ob_content}}</font>
+   {% endwith %}  
 <div>
 {% if user.is_authenticated %}
 	<form method="post"  action="/gstudio/page/gnowsys-page/{{page_ob.id}}/">{% csrf_token %}
@@ -146,10 +149,10 @@ $(".savesubsec1").hide();
 	</script>
 <!--ADDING AND DISPLAY TAG-->
 	{% addtag ot page_ob.id user %}
-
+	{% comment %}
 	<!--ADDING PRIOR PAGE-->
 	{% addpriorpost page_ob.id user %}
-
+	{% endcomment %}
 	<!-- Add relations for a page -->
 	{% add_res_relation page_ob user %}
 	<br/>
