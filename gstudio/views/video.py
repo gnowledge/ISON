@@ -389,8 +389,8 @@ def video(request):
 	# 		a.save()
 		
 	svid=""
-	videolist=p.get_nbh['contains_members']# omiting first 80 videos for temporary Aug 12
-	q=p.get_nbh['contains_members'][80:len(videolist)-1]
+	q=p.get_nbh['contains_members']# omiting first 80 videos for temporary Aug 12
+	#q=p.get_nbh['contains_members'][80:len(videolist)-1]
 	variables = RequestContext(request,{'vids':q,'val':svid})
 	template = "gstudio/video.html"
 	return render_to_response(template, variables)	

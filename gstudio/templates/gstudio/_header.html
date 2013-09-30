@@ -1,95 +1,30 @@
-{% load i18n grp_tags %}
+<link rel="shortcut icon" href="/static/gstudio/images-ison/favicon.html" />
+<link href="/static/gstudio/css-ison/template_css.css" rel="stylesheet" type="text/css" />
+<link href="/static/gstudio/css-ison/style6.css" rel="stylesheet" type="text/css" />
+<link href="/static/gstudio/css-ison/typography.css" rel="stylesheet" type="text/css" />
+<link href="templates/system/css/system.css" rel="stylesheet" type="text/css" />
+<link href="templates/system/css/general.css" rel="stylesheet" type="text/css" />
+<link href="/static/gstudio/css-ison/rokslidestrip.css" rel="stylesheet" type="text/css" />
+<link href="/static/gstudio/css-ison/rokmoomenu.css" rel="stylesheet" type="text/css" />
+<div id="horiz-menu" class="moomenu">
+				<div class="wrapper">
+<li ><img src="/static/gstudio/images-ison/ison-text.png" width="161px"/></li>
+			<ul class="menutop"><li id="current" class="active item1"><a href="/"><span>Home</span></a></li>
+									<!--
+									<li class="item33"><a href="about.html"><span>About</span></a></li>-->
 
-
-<div id="header">
-
-    <div class="branding">&nbsp;  Gnowledge Studio  </div>
-
-    <!-- Title -->
-    <div class="admin-title">  
-	<a href="/" title="Home">Home</a> 
-	 <!-- |    {% if grappelli_admin_title %}{{
-      grappelli_admin_title }}{% else %}{% get_admin_title %}{% endif %}
-  -->
-<!--    | <a href="{{ get_absolute_url }}/objects" title="Objects">Objects</a>-->
-
-        | <a href="{{  get_absolute_url }}/gstudio/user" title="Loom Studio">Loom</a>
-        | <a href="{{  get_absolute_url }}/gstudio/user/wikipage" title="Wikipages">Wikipages</a>
-	| <a href="{{  get_absolute_url }}/gstudio/resources/documents" title="My Documents">Documents</a>
-        | <a href="{{  get_absolute_url }}/gstudio/resources/images" title="Images">Images</a>
-        | <a href="{{  get_absolute_url }}/gstudio/resources/videos" title="My Videos">Videos</a>
-<!--        | <a href="{{  get_absolute_url }}/nodetypes" title="Nodes">Node Types</a>
-        | <a href="{{  get_absolute_url }}/objects" title="Objects">Node Objects</a>
--->
-   {% if user.is_authenticated %}
-	{% if user.is_staff %}
- 
-        | <a href="{{  get_absolute_url }}/admin" title="Admin Dashboard">Dashboard</a>
-
-       {% endif %}
-    {% endif %}
-	| <a href="http://beta.metastudio.org/gstudio/page/gnowsys-page/10093/" title="Help">Help</a>
-    
-
-    </div> 
-
-    {% if user.is_authenticated %}
-        <ul id="user-tools">
-            <!-- Username -->
-            <li class="user-options-container collapse closed">
-                <a href="javascript://" class="user-options-handler collapse-handler" title="{% firstof user.first_name user.username %}">{% firstof user.first_name user.username %}</a>
-                <ul class="user-options">
-                    <!-- Change Password -->
-                    {% url admin:password_change as password_change_url %}
-                    {% if password_change_url %}
-                        <li><a href="{{ password_change_url }}" title="Change Password">
-                    {% else %}
-                        <li><a href="{{ root_path }}password_change/">
-                    {% endif %}
-                    {% trans 'Change password' %}</a></li>
-		<!--Loom Preference !-->
-		    <li><a href="/gstudio/userpreference/" title="Loom Preference" >
-		    {% trans 'Loom Preference'%}</a></li>
-                    <!-- Logout -->
-		    <li><a href="{{get_absoulute_url}}/accounts/logout/" title="Log out">
-                    {% trans 'Log out' %}</a></li>
-
-                </ul>
-            </li>
-            <!-- Userlinks -->
-            {% block userlinks %}
-                <!-- JS tests -->
-                {% url test-index as testindexurl %}
-                {% if testindexurl %}
-                    <li><a href="{{ testindexurl }}" title="Tests">{% trans 'Tests' %}</a></li>
-                {% endif %}
-                <!-- Documentation -->
-                {% url django-admindocs-docroot as docsroot %}
-                {% if docsroot %}
-                 <!--   <li><a href="{{ docsroot }}" title="Documentation">{% trans 'Documentation' %}</a></li>-->
-                {% endif %}
-                <li><a href="https://gitorious.org/gnowsys-studio" title="Code">Code</a></li>
-            {% endblock %}
-        </ul>
-    {% else %}
-        <ul id="user-tools">
-	  <li><a href="{{root_path}}/accounts/login/?next={{request.path}}" title="Login">{% trans 'Login' %}</a></li>
-<!--	  <li>Not registered ? <a href="{{root_path}}/accounts/register" title="Register">{% trans 'Register' %}</a></li>-->
-	    </ul>
-	 
-	  
-	  
-	    
-    {% endif %}
-    {% block nav-global %}
-    {% endblock %}
-</div>
-
-<script type="text/javascript" charset="utf-8">
-    (function($) {
-        $(document).ready(function() {
-            $("div#header .collapse").grp_collapsible();
-        });
-    })(django.jQuery);
-</script>
-
+<li class="item33"><a href="/gstudio/user/wikipage/"><span>Pages</span></a></li>
+<li class="item27"><a href="/gstudio/resources/documents/"><span>Documents</span></a></li>
+<li class="item34"><a href="/gstudio/resources/images/"><span>Images</span></a></li>
+<li class="item65"><a href="/gstudio/resources/videos/"><span>Videos</span></a></li>								<!--	<li class="parent  item27"><a href="#" class="topdaddy"><span>Articles</span></a>
+									
+										<ul><li class="item64"><a href="#"><span>Celestial Co-ordiate System</span></a></li><li class="item28"><a href="#"><span>Solar System</span></a></li><li class="item29"><a href="#"><span>Planets</span></a></li><li class="item30"><a href="#"><span>Asteroids</span></a></li><li rel="38" class="parent item43"><a href="#" class="daddy"><span>Comets</span></a><ul><li class="item74"><span class="separator"><span>Historical Sightings</span></span></li><li class="item75"><span class="separator"><span>Myth &amp; Superstition</span></span></li><li class="parent item76"><span class="separator daddy"><span>Comet ISON</span></span><ul><li class="item78"><span class="separator"><span>Dummy Item</span></span></li><li class="item79"><span class="separator"><span>Dummy Item</span></span></li><li class="parent item80"><span class="separator daddy"><span>Dummy Item</span></span><ul><li class="item82"><span class="separator"><span>Dummy Item</span></span></li><li class="item83"><span class="separator"><span>Dummy Item</span></span></li><li class="item84"><span class="separator"><span>Dummy Item</span></span></li><li class="item85"><span class="separator"><span>Dummy Item</span></span></li></ul></li><li class="item81"><span class="separator"><span>Dummy Item</span></span></li></ul></li><li class="item77"><span class="separator"><span>Dummy Item</span></span></li></ul></li></ul>
+										
+									</li>
+									
+									<li class="parent  item34"><a href="#" class="topdaddy"><span>Activities</span></a><ul><li class="item35"><a href="#"><span>Activity 1</span></a></li><li class="item36"><a href="#"><span>Activity 2</span></a></li><li class="item37"><a href="#"><span>Activity 3</span></a></li><li class="parent item38"><a href="#" class="daddy"><span>Activity 4</span></a><ul><li class="item87"><span class="separator"><span>Dummy Item</span></span></li><li class="item88"><span class="separator"><span>Dummy Item</span></span></li><li class="item89"><span class="separator"><span>Dummy Item</span></span></li><li class="item90"><span class="separator"><span>Dummy Item</span></span></li></ul></li><li class="item39"><a href="#"><span>Activity 5</span></a></li><li class="item40"><a href="#"><span>Activity 6</span></a></li><li class="item41"><a href="#"><span>Activity 7</span></a></li><li class="item42"><a href="#"><span>Activity 8</span></a></li></ul></li>
+									
+									<li class="parent  item65"><a href="#" class="topdaddy"><span>Useful Stuff</span></a><ul><li class="item66"><a href="news.html"><span>News & Events</span></a></li><li class="item67"><a href="#"><span>Press Release</span></a></li><li class="item70"><a href="#"><span>FAQs</span></a></li><li class="item69"><a href="links.html"><span>Astronomy Links</span></a></li></ul></li> -->
+									
+									<li class="item8"><a href="#"><span>Sitemap</span></a></li></ul>								</div>
+			</div>
