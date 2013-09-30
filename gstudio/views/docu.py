@@ -30,9 +30,11 @@ import os
 import mimetypes
 from django.http import Http404
 from django.shortcuts import get_object_or_404
-
+from itertools import chain
+from operator import attrgetter
+import subprocess
+from gstudio.views.ajaxviews import *
 report = "true"
-
 
 def docu(request):
 	p=Objecttype.objects.get(title="Document")
