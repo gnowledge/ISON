@@ -37,14 +37,22 @@ report = "true"
 def docu(request):
 	p=Objecttype.objects.get(title="Document")
 	q=p.get_nbh['contains_members']
-	q = q.filter(status=2)
         documents=getdocuments()
         htmlot=Objecttype.objects.get(title='Html')
         html=htmlot.member_objects.all()
         audioot=Objecttype.objects.get(title='Audio')
         audio=audioot.member_objects.all()
 	pdfot=Objecttype.objects.get(title='PDF')
-        pdf=audioot.member_objects.all()
+        pdf=pdfot.member_objects.all()
+        presentationot=Objecttype.objects.get(title='Presentation')
+        presentation=presentationot.member_objects.all()
+	graphicsot=Objecttype.objects.get(title='Graphics')
+        graphics=graphicsot.member_objects.all()
+	spreadsheetot=Objecttype.objects.get(title='Spreadsheet')
+        spreadsheet=spreadsheetot.member_objects.all()
+        multimediaot=Objecttype.objects.get(title='Multimedia')
+        multimedia=multimediaot.member_objects.all()
+	
 	if request.method=="POST":
 		title = request.POST.get("title1","")
 		user = request.POST.get("user","")
@@ -130,7 +138,7 @@ def docu(request):
 			return render_to_response(template, vars)	
 	s=Nodetype.objects.get(title="Document")
 #	t=s.get_nbh['contains_members']
-        q=list(sorted(chain(q,html,audio,pdf),key=attrgetter('creation_date')))
+        q=list(sorted(chain(q,html,audio,pdf,presentation,spreadsheet,graphics,multimedia),key=attrgetter('creation_date')))
         q.reverse()
 	vars=RequestContext(request,{'documents':q,'docomment':s,'test1':documents})
 	template="gstudio/docu.html"
@@ -232,10 +240,10 @@ def create_object(file,log,content,usr,title):
  	data = open(os.path.join(FILE_URL,fname+html))
  	data1 = data.readlines()
         
- 	data2 = data1[74:]
-#        dataa = data2[data2.index('<div id="content">\n')]='<div id=" "\n'
+ 	data2 = data1[107:]
+        dataa = data2[data2.index('<div id="content">\n')]='<div id=" "\n'
 
-	data3 = data2[:-5]	
+	data3 = data2[:-6]	
  	newdata=""
  	for line in data3:
         	newdata += line.lstrip()
