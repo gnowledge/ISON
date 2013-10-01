@@ -418,7 +418,7 @@ Description:&nbsp;&nbsp;<b></b>
 {% endif %}-->
 <h4 style="">Image Gallery</h4>
 <div id="imageGallery">
-{% autopaginate images 40 %}
+{% autopaginate images 48 %}
 <table width="100%">
     <tr>
 {% for image1 in images %}
@@ -437,11 +437,11 @@ Description:&nbsp;&nbsp;<b></b>
 </form>
         </td>  
 	     
-    {% if not forloop.last and forloop.counter|divisibleby:"5" %}
+    {% if not forloop.last and forloop.counter|divisibleby:"6" %}
     </tr>
     <tr>
-				<td colspan="5">
- 				 {%  with x=forloop.counter|add:"-5"|stringformat:"s" %}
+				<td colspan="6">
+ 				 {%  with x=forloop.counter|add:"-6"|stringformat:"s" %}
  				 {% with y=forloop.counter|stringformat:"s" %}
  				  {% with count=x|add:":"|add:y %}
  				{% for image in images|slice:count %}
@@ -475,9 +475,9 @@ Description:&nbsp;&nbsp;<b></b>
 {% endfor %}
     </tr>
 <tr>
-				<td colspan="5">
+				<td colspan="6">
  				 
- 				{% for image in images|slice:"0:40" %}
+ 				{% for image in images|slice:"0:48" %}
  					 				
  					<div  align="center" class="gbobject-image" id = "divimage{{image.id}}" style="display:none">
 					
