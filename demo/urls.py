@@ -70,6 +70,10 @@ urlpatterns = patterns(
    url(r'^ison/how-to-see-ison/', direct_to_template, {'template': 'ison-html/ephemeris.html'}),
    url(r'^ison/useful-links/', direct_to_template, {'template': 'ison-html/useful_links.html'}),
  url(r'^ison/karnataka/', direct_to_template, {'template': 'ison-html/karnataka.html'}),
+ url(r'^ison/media/', direct_to_template, {'template': 'ison-html/links.html'}),
+ url(r'^ison/ison-india/', direct_to_template, {'template': 'ison-html/ison-india.html'}),
+ url(r'^ison/contact/', direct_to_template, {'template': 'ison-html/contact.html'}),
+ url(r'^ison/faqs/', direct_to_template, {'template': 'ison-html/faqs.html'}),
 
 
     url(r'^ison/', include('gstudio.urls')),
