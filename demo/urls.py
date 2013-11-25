@@ -74,6 +74,7 @@ urlpatterns = patterns(
  url(r'^ison/ison-india/', direct_to_template, {'template': 'ison-html/ison-india.html'}),
  url(r'^ison/contact/', direct_to_template, {'template': 'ison-html/contact.html'}),
  url(r'^ison/faqs/', direct_to_template, {'template': 'ison-html/faqs.html'}),
+ url(r'^ison/latest/', direct_to_template, {'template': 'ison-html/latestnews.html'}),
 
 
     url(r'^ison/', include('gstudio.urls')),

@@ -9,7 +9,7 @@
 /* @group Core Elements */
 
 html {height: 100%;margin-bottom: 1px;}
-body {margin: 0;font-family: Arial;font-size: 80%;line-height: 135%;}
+body {margin: 0;font-family: Arial;font-size: 80%;line-height: 135%; background-color:#ffffff}
 
 /* Font family information */
 
@@ -74,6 +74,7 @@ table.pollstableborder {padding-bottom: 10px;}
 
 .header-alt {margin-top: 20px;padding-bottom: 15px;}
 #main-body {position: relative;}
+#maincolhome {float: left;}
 #maincol {float: left;}
 #leftcol {float: left;}
 #leftcol .padding {padding: 0 15px 0 0;}
@@ -220,7 +221,7 @@ a.mainlevel:hover, a.sublevel:hover {text-decoration: none;}
 a.mainlevel {line-height: 45px;height: 45px;font-size: 130%;padding: 0 0 0 12px;text-transform: lowercase;}
 a.sublevel {height: 32px;line-height: 32px;margin: 0;padding: 0 0 0 16px;font-size: 110%;background: url(/static/gstudio/images-ison/main-bullet.png) 0 2px no-repeat;}
 ul.menu {margin:0;padding: 0 0 35px 0;text-transform: lowercase;}
-ul.menu li {list-style: none;margin: 0 -15px;padding: 0 15px;float: none;border-bottom: 1px solid #e6e6e6}
+ul.menu li {list-style: none;margin: 0 -15px;padding: 0 15px;float: none;border-bottom: 1px solid #00ff00}
 ul.menu span {display: block; height: 40px;line-height: 40px;}
 ul.menu li a, ul.menu li .separator {text-indent: 12px;}
 ul.menu ul li a, ul.menu ul li .separator {text-indent: 25px;background: url(/static/gstudio/images-ison/main-bullet.png) 8px 12px no-repeat;}
