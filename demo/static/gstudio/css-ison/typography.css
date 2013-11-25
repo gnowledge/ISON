@@ -6,7 +6,7 @@ ul.bullet-6 li, ul.bullet-7 li, ul.bullet-8 li {list-style: none;padding-bottom:
 
 ul.bullet-1 li {background: url(/static/gstudio/images-ison/typo/bullet-1.png) 0 5px no-repeat !important;}
 ul.bullet-2 li {background: url(/static/gstudio/images-ison/typo/bullet-2.png) 0 5px no-repeat !important;}
-ul.bullet-3 li {background: url(/static/gstudio/images-ison/typo/bullet-3.png) 0 5px no-repeat !important;}
+ul.bullet-3 li {background: url(/static/gstudio/images-ison/typo/bullet-3.png) 0 5px no-repeat !important; font-size: 13px}
 ul.bullet-4 li {background: url(/static/gstudio/images-ison/typo/bullet-4.png) 0 5px no-repeat !important;}
 ul.bullet-5 li {background: url(/static/gstudio/images-ison/typo/bullet-5.png) 0 5px no-repeat !important;}
 ul.bullet-6 li {background: url(/static/gstudio/images-ison/typo/bullet-6.png) 0 2px no-repeat !important;}

@@ -1,0 +1,146 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head>
+
+<title>News</title>
+
+<style type="text/css">
+<!--
+BODY 		{ margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; }
+
+ /* FONT COLORS */
+
+TABLE		{ COLOR: #000000; FONT: 13px arial, sans-serif; font-weight: normal }
+
+.title		{ COLOR: #5A9AEE; FONT: 13px arial, sans-serif; font-weight: bold; }
+
+#NewsDiv	{ position: absolute; left: 0; top: 0; width: 100% }
+
+ /* PAGE LINK COLORS */
+
+a:link		{ color: #0033FF; text-decoration: underline; }
+
+a:visited	{ color: #6633FF; text-decoration: underline; }
+
+a:active	{ color: #0033FF; text-decoration: underline; }
+
+a:hover		{ color: #6699FF; text-decoration: none; }
+
+-->
+</style>
+
+</head>
+<body bgcolor="#F0F0F0" text="#000000" onmouseover="scrollspeed=0" onmouseout="scrollspeed=current" onload="NewsScrollStart();">
+
+<div id="NewsDiv">
+<table cellpadding="5" cellspacing="0" border="0" align="center"><tr><td>
+
+<!-- SCROLLER CONTENT STARTS HERE -->
+
+<span class="title">
+<center>Latest resources</center><br>
+</span>
+
+<center>New PPTs in Tamil <a href="http://eyesoncometison.in/resources_ppts.html" target="_top"> (link)</a></center>
+<br>
+
+<center>Posters in Tamil <a href="http://eyesoncometison.in/resources_posters.html" target="_top"> (link)</a></center>
+<br>
+
+<center>Article Handbook in Assamese <a href="http://eyesoncometison.in/resources_handbooks.html" target="_top"> (link)</a></center>
+<br>
+
+<center>PPT in Oriya <a href="http://eyesoncometison.in/resources_ppts.html" target="_top"> (link)</a></center>
+<br>
+
+<center>PPTs in Marathi <a href="http://eyesoncometison.in/resources_ppts.html" target="_top"> (link)</a></center>
+<br>
+
+<center>Activity book in Punjabi<a href="http://eyesoncometison.in/resources_handbooks.html" target="_top"> (link)</a></center>
+<br>
+
+
+<span class="title">
+<center>Event Announcements</center><br>
+</span>
+
+<center>Puducherry State Workshop, Nov 15-16, 2013</center> <br>
+<center>Sikkim State Workshop, Nov 18-19, 2013</center> <br>
+<center>Nagaland State Workshop, Nov 21-22, 2013</center> <br>
+<center>Arunachal Pradesh State Workshop, Nov 23-24, 2013</center> <br>
+<center>Mizoram State Workshop, Nov 27-28, 2013</center> <br>
+<center>5 district workshops in Tripura, Nov 2013 </center> <br>
+
+<br>
+<center><i>Discover</i> Magazine's ISON photo contest <a href="http://discovermagazine.com/events/comet-ison-photo-contest#.UoReeLxSY1p">page</a> </center> <br>
+<center>Latest pics of ISON now online !</center> <br>
+
+
+
+<!--
+<center>Fergusson College Poster Exhibition , Oct 11-12, 2013</center> <br>
+--!>
+
+
+
+<!-- SCROLLER CONTENT ENDS HERE -->
+
+
+</td></tr></table>
+</div>
+
+
+
+<!-- YOU DO NOT NEED TO EDIT BELOW THIS LINE -->
+
+
+
+
+<script language="JavaScript" type="text/javascript">
+<!-- HIDE CODE
+
+var scrollspeed		= "1"		// SET SCROLLER SPEED 1 = SLOWEST
+var speedjump		= "30"		// ADJUST SCROLL JUMPING = RANGE 20 TO 40
+var startdelay 		= "1" 		// START SCROLLING DELAY IN SECONDS
+var nextdelay		= "0" 		// SECOND SCROLL DELAY IN SECONDS 0 = QUICKEST
+var topspace		= "2px"		// TOP SPACING FIRST TIME SCROLLING
+var frameheight		= "100px"	// IF YOU RESIZE THE WINDOW EDIT THIS HEIGHT TO MATCH
+
+
+
+current = (scrollspeed)
+
+
+function HeightData(){
+AreaHeight=dataobj.offsetHeight
+if (AreaHeight==0){
+setTimeout("HeightData()",( startdelay * 1000 ))
+}
+else {
+ScrollNewsDiv()
+}}
+
+function NewsScrollStart(){
+dataobj=document.all? document.all.NewsDiv : document.getElementById("NewsDiv")
+dataobj.style.top=topspace
+setTimeout("HeightData()",( startdelay * 1000 ))
+}
+
+function ScrollNewsDiv(){
+dataobj.style.top=parseInt(dataobj.style.top)-(scrollspeed)
+if (parseInt(dataobj.style.top)<AreaHeight*(-1)) {
+dataobj.style.top=frameheight
+setTimeout("ScrollNewsDiv()",( nextdelay * 1000 ))
+}
+else {
+setTimeout("ScrollNewsDiv()",speedjump)
+}}
+
+
+
+// END HIDE CODE -->
+</script>
+
+
+</body>
+</html>

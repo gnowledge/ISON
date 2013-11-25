@@ -1,7 +1,14 @@
 {% include "ison-html/ison-header.html" %}
-						<div class="mainmod-surround">
-							<div id="mainmodules" class="spacer w49" style="padding:10px">
-							<!-- Add Content Here -->
+	<!--Begin Main Column-->
+	<div id="maincol" style="width: 685px">
+		<div class="mainmod-top"><div class="topleft"><div class="topright"></div></div></div>
+	<div class="mainmod-surround">
+	<div id="mainmodules" class="spacer w49" style="padding:10px">
+	
+	
+	<!-- Add Content Below This -->
+	
+	
 
 <table border="0">
 <tr>
@@ -35,76 +42,103 @@
 
 <br/>
 <p style="color:#32447A;font-size:12px;">Images of Comet ISON taken with Hanle Telescope by Margarita Safonova, Indian Institute of Astrophysics</p>
-<img src="/static/gstudio/images-ison/Safonova_Jan.jpg" border="0" width="323px" height="351px"/>
-<img src="/static/gstudio/images-ison/Safonova_May.jpg" border="0" width="323px" height="351px"/ />
-<img src="/static/gstudio/images-ison/Safonova_Sept.jpg" border="0" width="323px" height="351px"/ />
+<img src="/static/gstudio/images-ison/Safonova_Jan.jpg" border="0"  width="202px" height="220px"/>
+<img src="/static/gstudio/images-ison/Safonova_May.jpg" border="0"  width="202px" height="220px"/ />
+<img src="/static/gstudio/images-ison/Safonova_Sept.jpg" border="0"  width="202px" height="220px"/ />
 
 							</div>
 						</div>
-						<div class="mainmod-bottom"><div class="bottomleft"><div class="bottomright"></div></div></div>
+	</div>
+	<!--End Main Column-->
 	
-											<div id="main-content">
-																					<div id="maincontent-block">
-								
-																<table class="blog" cellpadding="0" cellspacing="0">
-<tr>
-	<td valign="top">
-					<div>
+	
+	
+	
+	<!--Begin Right Column-->
+		<div id="rightcol" style="color:#32447A">
+		<div class="padding">
+		<div class="module">
 		
-<table class="contentpaneopen">
+		<div>
+		<div>
+		<div>
+		<h3>News</h3>
+			<ul class="bullet-3">
 
-
-
-
-<tr>
-<td valign="top" colspan="2">
-</td>
-</tr>
-
-
-
-</table>
-<span class="article_separator">&nbsp;</span>
+	
+            <iframe id="NewsWindow" src="ison/latest/" marginwidth="0" marginheight="0" style="border: #000000 0px solid;" scrolling="no" width="500" frameborder="0" height="100"></iframe>
+            
+            </ul>
+        </div>
 		</div>
-		</td>
-</tr>
-
-
-</table>
-
-															</div>
-						</div>
-											</div>
-					<!--End Main Column-->
-					<!--Begin Right Column-->
-										<div id="rightcol">
-						<div class="padding">
-																							<div class="module">
-			<div>
-				<div>
-					<div>
-													<h3>Resources</h3>
-											<ul class="bullet-3">
-{% include 'ison-html/link.html' %}
-
-</ul>					</div>
-				</div>
-			</div>
+		</div>
+		
+		</div>
+		</div>
 		</div>
 	
-						</div>
-					</div>
-										<!--End Right Column-->
-				</div>
-				<div class="clr"></div>
-							</div>
-			<div id="main-body-bottom"></div>
-			<div class="wrapper">
-							</div>
+	
+		<div id="rightcol" style="color:#32447A">
+		<div class="padding">
+		<div class="module">
+		
+		<div>
+		<div>
+		<div>
+		<h3>Resources</h3>
+			<ul class="bullet-3">
+
+            {% include 'ison-html/link.html' %}
+            
+            </ul>
+        </div>
 		</div>
-		<!--End Main Content Area-->
+		</div>
+		
+		</div>
+		</div>
+		</div>
+		
+		<div id="rightcol">
+		<div class="padding">
+		<div class="module">
+		
+		<div>
+		<div>
+		<div>
+		<h3>Workshops</h3>
+			<ul class="bullet-3">
+			<li><a href="/ison/workshops-list">List of Workshops</a></li>
+			    <ul>
+			    <li><a href="/ison/workshops-state">By State</a></li>
+			    <li><a href="/ison/workshops-date">By Date</a></li>
+			    <li><a href="/ison/workshops-look">At A Glance</a></li>
+			    </ul>
+			<li><a href="/ison/workshop-resources">National workshops</a></li>
+            </ul>
+        </div>
+		</div>
+		</div>
+		
+		</div>
+		</div>
+		</div>
+		
+	<!--End Right Column-->
+	
+	
+		</div>
+		<div class="clr"></div>
+		</div>
+		<div id="main-body-bottom"></div>
+		<div class="wrapper"></div>
+		</div>
+		
+
+	<!--End Main Content Area-->
 {% include "ison-html/ison-footer.html" %}
-		
-			</body>
+
+	
+</body>
 
 </html>
