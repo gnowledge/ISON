@@ -169,7 +169,7 @@ fieldset { border: 1px solid #cccccc; width:230px; padding: 1.4em; margin: 0 0 1
 {
 	width:504px;
 	height:30px;
-	background:#283c3d;
+	background: url(/static/gstudio/images-ison/style6/horiz-l.png) 0 4px no-repeat;
 	border-radius:15px;
 	margin:auto;
 	position:relative;
@@ -218,7 +218,7 @@ margin-bottom:30px;
 {
 	width:394px;
 	height:53px;
-	background:url(/static/gstudio/img/home/searchbg.jpg);
+	background:url(/static/gstudio/images-ison/style6/horiz-l.png) 0 4px no-repeat;
 	border-radius:15px;
 	display:inline;
 	float:left;
